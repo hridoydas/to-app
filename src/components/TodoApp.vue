@@ -24,9 +24,9 @@
       </td>
       <td style="width:120px">
         <span  @click="changeStatus(index)" class="pointer"
-        :class="{'text-danger': task.status==='to-do',
-                      'text-warning': task.status==='in-progress',
-                      'text-info': task.status==='finished'
+        :class="{'status-todo': task.status==='to-do',
+                      'status-inprogress': task.status==='in-progress',
+                      'status-finished': task.status==='finished'
                       }">
           {{task.status}}
         </span>
@@ -126,5 +126,14 @@ export default {
 }
 .finished{
   text-decoration: line-through;
+}
+.status-finished{
+  color: green;
+}
+.status-inprogress{
+  color: orange;
+}
+.status-inprogress{
+  color: blue;
 }
 </style>
